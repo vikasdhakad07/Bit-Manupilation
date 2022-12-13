@@ -1,0 +1,16 @@
+Method :Number of 1 Bits
+
+
+class Solution {
+    static int setBits(int N) {
+        // code here
+        String bin = Long.toBinaryString(N);
+        int count=0;
+        for(int i=0;i<bin.length();i++){
+            if(bin.charAt(i)=='1'){
+                count++;
+            }
+        }
+        return count;
+    }
+}
