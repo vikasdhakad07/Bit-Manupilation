@@ -1,0 +1,18 @@
+Method 01: Geek hates too many 1s
+
+
+
+class Solution {
+    public static int noConseBits(int n) {
+        // code here
+        String bin=Integer.toBinaryString(n);
+        for(int i=2;i<bin.length();i++){
+            if(bin.charAt(i)=='1'&&bin.charAt(i-1)=='1'&&bin.charAt(i-2)=='1'){
+                n-=Math.pow(2,bin.length()-i-1);
+                i+=2;
+            }
+        }
+        return n;
+        
+    }
+}
