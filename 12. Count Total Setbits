@@ -1,0 +1,13 @@
+Method 01: Count Total Setbits
+
+
+class Solution{
+    static int countBits(int N){
+        // code here
+        int sum=0;
+        for(int i=1;i<=N;i++){
+            sum=sum+Integer.bitCount(i);
+        }
+        return sum;
+    }
+}
