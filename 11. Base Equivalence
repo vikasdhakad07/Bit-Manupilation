@@ -1,0 +1,17 @@
+Method 01: Base Equivalence
+
+
+class Solution
+{
+    String baseEquiv(int n, int m)
+    {
+        // code here
+        for(int i=2;i<=32;i++){
+            int check=(int)(Math.log(n)/Math.log(i))+1;
+            if(check==m){
+                return "Yes";
+            }
+        }
+        return "No";
+    }
+}
