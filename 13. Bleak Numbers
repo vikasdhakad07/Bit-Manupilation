@@ -1,0 +1,27 @@
+Method 01: Bleak Numbers
+
+
+class Solution
+{
+    public int is_bleak(int n)
+    {
+        // Code here
+        for(int i=1;i<n;i++){
+            if(i+countset(i)==n){
+                return 0;
+            }
+        }
+        return 1;
+    }
+    
+    public int countset(int n){
+        int cnt=0;
+        while(n!=0){
+            if(n%2==1){
+                cnt++;
+            }
+            n=n/2;
+        }
+        return cnt;
+    }
+}
